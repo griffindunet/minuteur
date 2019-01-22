@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prêt? Partez!</title>
+    <style>
+  form{
+  	text-align: center;
+  }
+    </style>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Remysimpson portfolio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+      </li>
+    
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Pastebin <span class="sr-only"></span></a>
+      </li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Chrono <span class="sr-only"></span></a>
+      </li>
+    
+    
+    </ul>
+  
+  </div>
+
+</nav>
+
+</head>
+
+<body>
+
+<form name="formulaire">
+	<div class="alert alert-primary" role="alert">
+Entrez le nombre de votre choix en seconde </div>
+<input type="text" name="minuteur" value= 100> secondes <br> 
+
+<input type="button" value="Démarrez!" onClick="minutage();">
+<input type="button" value="Arrêter" onClick="clearTimeout(att)">
+    <input type="reset" value="réinitialisation">
+
+
+</form>
+
+<script type="text/javascript">
+
+
+var att ;
+
+function minutage(){
+ var nombre = window.document.formulaire.minuteur.value; //ajouter la valeur nombre dans le formulaire dans la form qui s'appel formulaire 
+ nombre =parseInt(nombre)-1; //descendre de 1  
+ window.document.formulaire.minuteur.value = nombre; //ajouter la valeur de nombre 
+ att=setTimeout("minutage()",1000); 
+}
+
+</script>
+</body>
+</html>
